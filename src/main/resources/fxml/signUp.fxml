@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: rgb(30,39,130);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.SignupController">
+    <children>
+        <AnchorPane layoutY="59.0" prefHeight="343.0" prefWidth="700.0" style="-fx-background-color: white;">
+            <children>
+                <TextField fx:id="signupLogin" layoutX="94.0" layoutY="90.0" prefHeight="38.0" prefWidth="217.0" promptText="Felhasználónév" style="-fx-border-color: silver; -fx-border-radius: 5;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <PasswordField fx:id="signupPassword" layoutX="390.0" layoutY="90.0" prefHeight="38.0" prefWidth="217.0" promptText="Jelszó" style="-fx-border-color: silver; -fx-border-radius: 5;" />
+                <Button fx:id="signupButton" contentDisplay="TOP" layoutX="239.0" layoutY="291.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="217.0" style="-fx-background-color: orange;" text="Felhasználó létrehozása" textAlignment="CENTER" textFill="#f5f5f5">
+                    <font>
+                        <Font name="Sitka Text Bold Italic" size="14.0" />
+                    </font>
+                    <effect>
+                        <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+
+                        </Lighting>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <TextField fx:id="signupLastname" layoutX="390.0" layoutY="32.0" prefHeight="38.0" prefWidth="217.0" promptText="Családnév" style="-fx-border-color: silver; -fx-border-radius: 5;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="signupName" layoutX="94.0" layoutY="32.0" prefHeight="38.0" prefWidth="217.0" promptText="Keresztnév" style="-fx-border-color: silver; -fx-border-radius: 5;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="signupLocation" layoutX="239.0" layoutY="228.0" prefHeight="38.0" prefWidth="217.0" promptText="Lakcím" style="-fx-border-color: silver; -fx-border-radius: 5;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <Label fx:id="comment" alignment="CENTER" contentDisplay="CENTER" layoutX="187.0" layoutY="203.0" prefHeight="17.0" prefWidth="322.0" textAlignment="CENTER" textFill="RED" AnchorPane.leftAnchor="187.0" />
+            <RadioButton fx:id="signUpMale" accessibleRole="RADIO_MENU_ITEM" layoutX="267.0" layoutY="163.0" mnemonicParsing="false" selected="true" text="Férfi">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="signUpFemale" accessibleRole="RADIO_MENU_ITEM" layoutX="390.0" layoutY="163.0" mnemonicParsing="false" text="Nő" toggleGroup="$gender" />
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+              <Label fx:id="Title" layoutX="16.0" layoutY="7.0" prefHeight="45.0" prefWidth="200.0" text="Osztálynapló" textAlignment="RIGHT" textFill="WHITE" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="7.0">
+                  <font>
+                      <Font name="Impact" size="36.0" />
+                  </font>
+              </Label>
+         </children></AnchorPane>
+      <Button fx:id="loginButton" contentDisplay="TOP" layoutX="469.0" layoutY="14.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="217.0" style="-fx-background-color: orange;" text="Bejelentkezés" textAlignment="CENTER" textFill="#f5f5f5" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Sitka Text Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+    </children>
+</AnchorPane>

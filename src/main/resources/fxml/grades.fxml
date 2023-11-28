@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="755.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.GradesController">
+    <children>
+        <AnchorPane layoutY="72.0" prefHeight="393.0" prefWidth="755.0" style="-fx-background-color: #545353;">
+            <children>
+                <TableView fx:id="gradesTable" layoutX="28.0" layoutY="74.0" prefHeight="246.0" prefWidth="700.0" stylesheets="@tableview.css">
+                    <columns>
+                        <TableColumn fx:id="idCol" prefWidth="25.0" style="-fx-alignment: left;" text="ID" />
+                        <TableColumn fx:id="nameCol" prefWidth="115.0" style="-fx-alignment: center;" text="Név" />
+                        <TableColumn fx:id="module1Col" prefWidth="130.0" style="-fx-alignment: center;" text="Modul 1" />
+                        <TableColumn fx:id="moduletest1Col" prefWidth="33.0" style="-fx-alignment: center;" text="Tz. 1" />
+                        <TableColumn fx:id="module2Col" prefWidth="130.0" style="-fx-alignment: center;" text="Modul 2" />
+                        <TableColumn fx:id="moduletest2Col" prefWidth="33.0" style="-fx-alignment: center;" text="Tz. 2" />
+                  <TableColumn fx:id="module3Col" prefWidth="130.0" style="-fx-alignment: center;" text="Modul 3" />
+                  <TableColumn fx:id="moduletest3Col" prefWidth="33.0" style="-fx-alignment: center;" text="Tz. 3" />
+                  <TableColumn fx:id="semesterCol" prefWidth="75.0" style="-fx-alignment: center;" text="Félévi" />
+                    </columns>
+                </TableView>
+                <HBox fx:id="teacherLine" layoutX="538.0" layoutY="14.0" prefHeight="36.0" prefWidth="167.0">
+                    <children>
+                        <FontAwesomeIcon fill="#eee423" glyphName="REFRESH" onMouseClicked="#refreshTable" size="3em">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fill="#51ff41" glyphName="PLUS" onMouseClicked="#addGrade" size="3em">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </FontAwesomeIcon>
+                  <FontAwesomeIcon fill="#eb7e7e" glyphName="MINUS" onMouseClicked="#deleteGrade" size="3em">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                        <FontAwesomeIcon fill="#7ea8da" glyphName="CALCULATOR" onMouseClicked="#calculateModule" size="3em">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </FontAwesomeIcon>
+                    </children>
+                </HBox>
+            <HBox layoutX="28.0" layoutY="18.0" prefHeight="28.0" prefWidth="510.0">
+               <children>
+                  <ComboBox fx:id="selectSemester" prefHeight="25.0" prefWidth="75.0" promptText="Félév">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="selectSubject" prefHeight="25.0" prefWidth="92.0" promptText="Tantárgy">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="selectStudent" prefHeight="25.0" prefWidth="154.0" promptText="Név">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="selectModule" prefHeight="25.0" prefWidth="79.0" promptText="Modul">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="selectGrade" prefHeight="25.0" prefWidth="75.0" promptText="Jegy" />
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="message" alignment="CENTER" layoutX="220.0" layoutY="50.0" prefHeight="17.0" prefWidth="316.0" textAlignment="CENTER" textFill="RED" />
+            <HBox layoutX="523.0" layoutY="333.0" prefHeight="36.0" prefWidth="167.0">
+               <children>
+                  <FontAwesomeIcon fx:id="outIcon" fill="WHITE" glyphName="SIGN_OUT" onMouseClicked="#refreshTable" size="4em">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon fx:id="printIcon" fill="WHITE" glyphName="PRINT" onMouseClicked="#addGrade" size="4em">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon fx:id="semesterIcon" fill="WHITE" glyphName="CALCULATOR" onMouseClicked="#calculateModule" size="4em">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+               </children>
+            </HBox>
+            <Button fx:id="loadButton" contentDisplay="TOP" layoutX="28.0" layoutY="338.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: orange;" text="Betöltés" textFill="#f5f5f5">
+               <font>
+                  <Font name="Sitka Text Bold Italic" size="14.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="schoolyearButton" contentDisplay="TOP" layoutX="151.0" layoutY="338.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: orange;" text="Tanév összesítése" textFill="#f5f5f5">
+               <font>
+                  <Font name="Sitka Text Bold Italic" size="14.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="deleteAllButton" contentDisplay="TOP" layoutX="322.0" layoutY="338.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: orange;" text="Összes törlése" textFill="#f5f5f5">
+               <font>
+                  <Font name="Sitka Text Bold Italic" size="14.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            </children>
+            <opaqueInsets>
+                <Insets left="10.0" />
+            </opaqueInsets>
+        </AnchorPane>
+        <HBox layoutX="9.0" layoutY="10.0" prefHeight="47.0" prefWidth="356.0" AnchorPane.leftAnchor="19.0">
+            <children>
+                <Label fx:id="titleLabel" prefHeight="69.0" prefWidth="190.0" text="Oszálynapló" textFill="WHITE">
+                    <font>
+                        <Font name="Impact" size="36.0" />
+                    </font>
+                </Label>
+                <VBox prefHeight="36.0" prefWidth="92.0">
+                    <children>
+                        <Label fx:id="usernameLabel" text="Label" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="roleLabel" text="Label" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Label layoutX="621.0" layoutY="11.0" text="Érdemjegyek" textFill="#fff6f6" AnchorPane.rightAnchor="19.0">
+            <font>
+                <Font name="Impact" size="36.0" />
+            </font>
+        </Label>
+
+
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="755.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.TableViewController">
+    <children>
+      <AnchorPane layoutY="72.0" prefHeight="393.0" prefWidth="755.0" style="-fx-background-color: #545353;">
+         <children>
+              <TableView fx:id="studentsTable" layoutX="28.0" layoutY="74.0" prefHeight="246.0" prefWidth="700.0" stylesheets="@tableview.css">
+                  <columns>
+                      <TableColumn fx:id="idCol" prefWidth="25.0" style="-fx-alignment: left;" text="ID" />
+                      <TableColumn fx:id="nameCol" prefWidth="120.0" style="-fx-alignment: center;" text="NAME" />
+                      <TableColumn fx:id="birthCol" prefWidth="146.0" style="-fx-alignment: center;" text="BIRTH DATE" />
+                      <TableColumn fx:id="adressCol" prefWidth="146.0" style="-fx-alignment: center;" text="ADRESS" />
+                      <TableColumn fx:id="emailCol" prefWidth="128.0" style="-fx-alignment: center;" text="EMAIL" />
+                      <TableColumn fx:id="editCol" prefWidth="134.0" style="-fx-alignment: center;" text="EDIT" />
+                  </columns>
+              </TableView>
+              <HBox layoutX="7.0" layoutY="14.0" prefHeight="59.0" prefWidth="233.0">
+               <children>
+                  <FontAwesomeIcon fx:id="addStudentIcon" fill="#01da2c" glyphName="USER_PLUS" onMouseClicked="#getAddView" size="4em" text="" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="30.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon fx:id="printIcon" fill="#747ff2" glyphName="PRINT" onMouseClicked="#print" size="4em" textAlignment="CENTER" wrappingWidth="60.14285755157471">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="30.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon fx:id="refreshIcon" fill="#edd807" glyphName="REFRESH" onMouseClicked="#refresh" size="4em" text="">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="30.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+               </children>
+            </HBox>
+            <FontAwesomeIcon fx:id="settingIcon" fill="#979393" glyphName="GEAR" layoutX="28.0" layoutY="371.0" size="4em">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIcon>
+            <HBox layoutX="573.0" layoutY="8.0" prefHeight="36.0" prefWidth="167.0">
+               <children>
+                  <FontAwesomeIcon fx:id="gradesIcon" fill="WHITE" glyphName="BOOK" size="3em">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon fx:id="galleryIcon" fill="WHITE" glyphName="IMAGE" size="3em">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon fx:id="outIcon" fill="WHITE" glyphName="SIGN_OUT" size="3em">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+               </children>
+            </HBox>
+            <Button fx:id="deleteAllButton" contentDisplay="TOP" layoutX="602.0" layoutY="335.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: orange;" text="Összes törlése" textFill="#f5f5f5">
+               <font>
+                  <Font name="Sitka Text Bold Italic" size="14.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets left="10.0" />
+         </opaqueInsets>
+      </AnchorPane>
+      <HBox layoutX="9.0" layoutY="10.0" prefHeight="47.0" prefWidth="382.0" AnchorPane.leftAnchor="19.0">
+         <children>
+            <Label fx:id="titleLabel" prefHeight="69.0" prefWidth="190.0" text="Oszálynapló" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="36.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="47.0" prefWidth="164.0">
+               <children>
+                  <Label fx:id="usernameLabel" prefHeight="20.0" prefWidth="163.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="roleLabel" prefHeight="20.0" prefWidth="161.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="621.0" layoutY="11.0" text="Névlista" textFill="#fff6f6" AnchorPane.rightAnchor="19.0">
+         <font>
+            <Font name="Impact" size="36.0" />
+         </font>
+      </Label>
+
+
+
+    </children>
+</AnchorPane>
