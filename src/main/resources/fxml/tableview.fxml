@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="755.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.TableViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="755.0" style="-fx-background-color: blue; -fx-font-family: 'Arial'; " xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.TableViewController">
     <children>
       <AnchorPane layoutY="72.0" prefHeight="393.0" prefWidth="755.0" style="-fx-background-color: #545353;">
          <children>
@@ -90,7 +90,7 @@
             </HBox>
             <Button fx:id="deleteAllButton" contentDisplay="TOP" layoutX="602.0" layoutY="335.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: orange;" text="Összes törlése" textFill="#f5f5f5">
                <font>
-                  <Font name="Sitka Text Bold Italic" size="14.0" />
+                  <Font name="Times New Roman bold" size="14.0" />
                </font>
                <effect>
                   <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
@@ -119,12 +119,12 @@
                <children>
                   <Label fx:id="usernameLabel" prefHeight="20.0" prefWidth="163.0" text="Label" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Times New Roman bold" size="14.0" />
                      </font>
                   </Label>
                   <Label fx:id="roleLabel" prefHeight="20.0" prefWidth="161.0" text="Label" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Times New Roman bold" size="14.0" />
                      </font>
                   </Label>
                </children>

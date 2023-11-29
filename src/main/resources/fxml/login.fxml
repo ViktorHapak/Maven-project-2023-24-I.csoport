@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: rgb(30,39,130);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: rgb(30,39,130); -fx-font-family: 'Arial'; " xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.LoginController">
    <children>
       <AnchorPane layoutY="57.0" prefHeight="343.0" prefWidth="700.0" style="-fx-background-color: white;">
          <children>
@@ -18,18 +18,18 @@
                <children>
                   <TextField fx:id="LoginField" layoutX="42.0" layoutY="70.0" prefHeight="38.0" prefWidth="217.0" promptText="Felhasználónév" style="-fx-border-color: silver; -fx-border-radius: 5;">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Times New Roman bold" size="14.0" />
                      </font>
                   </TextField>
                   <Label fx:id="AuthorizationLabel" layoutX="69.0" layoutY="14.0" prefHeight="38.0" prefWidth="163.0" text="Bejelentkezés" textAlignment="CENTER" textFill="#756f6f">
                      <font>
-                        <Font name="Impact" size="28.0" />
+                        <Font name="Times New Roman bold" size="28.0" />
                      </font>
                   </Label>
                   <PasswordField fx:id="PasswordField" layoutX="42.0" layoutY="136.0" prefHeight="38.0" prefWidth="217.0" promptText="Jelszó" style="-fx-border-color: silver; -fx-border-radius: 5;" />
                   <Button fx:id="SigninButton" contentDisplay="TOP" layoutX="111.0" layoutY="257.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: orange;" text="Belépés" textAlignment="CENTER" textFill="#f5f5f5">
                      <font>
-                        <Font name="Sitka Text Bold Italic" size="14.0" />
+                        <Font name="Times New Roman bold" size="14.0" />
                      </font>
                      <effect>
                         <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
@@ -54,7 +54,7 @@
       </Label>
       <Button fx:id="SignupButton" contentDisplay="TOP" layoutX="506.0" layoutY="14.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="187.0" style="-fx-background-color: orange;" text="Regisztráció" textFill="#f5f5f5" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0">
          <font>
-            <Font name="Sitka Text Bold Italic" size="14.0" />
+            <Font name="Times New Roman bold" size="14.0" />
          </font>
          <effect>
             <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">

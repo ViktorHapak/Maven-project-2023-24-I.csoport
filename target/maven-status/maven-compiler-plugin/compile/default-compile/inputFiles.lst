@@ -1,17 +1,17 @@
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\controller\TableViewController.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\model\User.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\repository\SubjectRepository.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\MainApp.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\model\Final_grade.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\repository\StudentRepository.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\repository\UserRepository.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\controller\FXMLStudentsSceneController.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\model\Student.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\controller\GradesController.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\model\Grade1.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\model\Subject.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\repository\GradeRepository.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\controller\SignupController.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\ChangeWindow.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\controller\LoginController.java
-F:\JavaFx projects\Javafx_Project\src\main\java\hu\unideb\inf\model\Grade2.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/repository/StudentRepository.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/ChangeWindow.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/controller/FXMLStudentsSceneController.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/controller/LoginController.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/model/User.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/MainApp.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/model/Student.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/model/Final_grade.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/model/Grade2.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/repository/GradeRepository.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/controller/GradesController.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/repository/SubjectRepository.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/model/Subject.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/controller/TableViewController.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/repository/UserRepository.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/model/Grade1.java
+/Users/nagyadam/Documents/Maven-project-2023-24-I.csoport/src/main/java/hu/unideb/inf/controller/SignupController.java
