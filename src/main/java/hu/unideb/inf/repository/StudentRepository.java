@@ -1,9 +1,6 @@
 package hu.unideb.inf.repository;
 
-import hu.unideb.inf.model.Final_grade;
-import hu.unideb.inf.model.Grade1;
-import hu.unideb.inf.model.Grade2;
-import hu.unideb.inf.model.Student;
+import hu.unideb.inf.model.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -117,6 +114,11 @@ public class StudentRepository {
         //Write the output-list in lines
         Query query = entityManager.createQuery("Select s.email from Student s");
         return query.getResultList();
+    }
+
+    public Student findByStudentemail(String email){
+        Query query = entityManager.createQuery("select s from Student s where s.email = '" + email + "'");
+        return (Student) query.getSingleResult();
     }
 
     public List<Student> findStudents() {

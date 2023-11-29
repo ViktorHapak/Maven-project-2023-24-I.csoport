@@ -127,7 +127,7 @@
             </HBox>
             <Button fx:id="loadButton" contentDisplay="TOP" layoutX="28.0" layoutY="338.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: orange;" text="Betöltés" textFill="#f5f5f5">
                <font>
-                  <Font name="Sitka Text Bold Italic" size="14.0" />
+                  <Font name="Times New Roman bold"  size="14.0" />
                </font>
                <effect>
                   <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
@@ -142,7 +142,7 @@
             </Button>
             <Button fx:id="schoolyearButton" contentDisplay="TOP" layoutX="151.0" layoutY="338.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: orange;" text="Tanév összesítése" textFill="#f5f5f5">
                <font>
-                  <Font name="Sitka Text Bold Italic" size="14.0" />
+                  <Font name="Times New Roman bold"  size="14.0" />
                </font>
                <effect>
                   <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
@@ -157,7 +157,7 @@
             </Button>
             <Button fx:id="deleteAllButton" contentDisplay="TOP" layoutX="322.0" layoutY="338.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: orange;" text="Összes törlése" textFill="#f5f5f5">
                <font>
-                  <Font name="Sitka Text Bold Italic" size="14.0" />
+                  <Font name="Times New Roman bold"  size="14.0" />
                </font>
                <effect>
                   <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
@@ -177,7 +177,7 @@
         </AnchorPane>
         <HBox layoutX="9.0" layoutY="10.0" prefHeight="47.0" prefWidth="356.0" AnchorPane.leftAnchor="19.0">
             <children>
-                <Label fx:id="titleLabel" prefHeight="69.0" prefWidth="190.0" text="Oszálynapló" textFill="WHITE">
+                <Label fx:id="titleLabel" prefHeight="69.0" prefWidth="190.0" text="Osztálynapló" textFill="WHITE">
                     <font>
                         <Font name="Impact" size="36.0" />
                     </font>
@@ -186,12 +186,12 @@
                     <children>
                         <Label fx:id="usernameLabel" text="Label" textFill="WHITE">
                             <font>
-                                <Font size="14.0" />
+                                <Font name="Times New Roman bold" size="14.0" />
                             </font>
                         </Label>
                         <Label fx:id="roleLabel" text="Label" textFill="WHITE">
                             <font>
-                                <Font size="14.0" />
+                                <Font name="Times New Roman bold" size="14.0" />
                             </font>
                         </Label>
                     </children>

@@ -106,6 +106,16 @@ public class TableViewController {
             studentRepository.close();
             changeWindow.changeOnIcon(outIcon,"/fxml/grades.fxml");
         });
+
+        addStudentIcon.setOnMouseClicked(mouseEvent -> {
+            LoginController.active_role = "0";
+            changeWindow = new ChangeWindow();
+            studentRepository.close();
+            changeWindow.changeOnIcon(outIcon,"/fxml/AddStudent.fxml");
+        });
+
+
+
     }
 
     @FXML
@@ -132,6 +142,7 @@ public class TableViewController {
     void refresh(MouseEvent event) throws SQLException {
         refreshTable();
     }
+
 
     @FXML
     void refreshTable() throws SQLException {
@@ -211,7 +222,7 @@ public class TableViewController {
                         managebtn.setStyle("-fx-alignment:center");
                         HBox.setMargin(deleteIcon, new Insets(2, 2, 0, 3));
                         HBox.setMargin(editIcon, new Insets(2, 3, 0, 2));
-                        //managebtn.getChildren().remove(editIcon); -nem megfelelő jogosultság esetén ezzel a függvénnyel töröljük az ikont
+                        //managebtn.getChildren().remove(editIcon); //nem megfelelő jogosultság esetén ezzel a függvénnyel töröljük az ikont
                         //managebtn.getChildren().remove(deleteIcon);
 
 
