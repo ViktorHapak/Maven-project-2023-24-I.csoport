@@ -210,12 +210,17 @@ public class TableViewController {
 
 
                         deleteIcon.setOnMouseClicked((MouseEvent event) -> {
-
+                            int selectedIndex = getTableRow().getIndex();
+                            String email = emailCol.getCellData(selectedIndex);
+                            //Student selectedStudent = studentsTable.getItems().get(selectedIndex);
+                            studentRepository.deleteByEmail(email);
                         });
 
-                        editIcon.setOnMouseClicked((MouseEvent event) -> {
-
-
+                        editIcon.setOnMouseClicked(mouseEvent -> {
+                            LoginController.active_role = "0";
+                            changeWindow = new ChangeWindow();
+                            studentRepository.close();
+                            changeWindow.changeOnIcon(outIcon,"/fxml/AddStudent.fxml");
                         });
 
                         HBox managebtn = new HBox(editIcon, deleteIcon);

@@ -121,6 +121,19 @@ public class StudentRepository {
         return (Student) query.getSingleResult();
     }
 
+    public void deleteByEmail(String email) {
+            entityManager.getTransaction().begin();
+
+            Long studentId = findByStudentemail(email).getId();
+            Student studentToDelete = entityManager.find(Student.class, studentId);
+
+            if (studentToDelete != null) {
+                entityManager.remove(studentToDelete);
+            }
+
+            entityManager.getTransaction().commit();
+    }
+
     public List<Student> findStudents() {
         Query query = entityManager.createQuery("Select s from Student s");
         return query.getResultList();

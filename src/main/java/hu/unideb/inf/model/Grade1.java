@@ -19,9 +19,11 @@ public class Grade1 {
     @ManyToOne
     private Subject subject;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Student student;
 
+    @OneToMany(mappedBy = "grade1", cascade = CascadeType.ALL)
+    private List<Final_grade> finalGrades;
     private String modulegrades1;
     private Integer module1;
     private String modulegrades2;
