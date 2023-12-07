@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="755.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.TableViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="755.0" style="-fx-background-color: blue; -fx-font-family: 'Arial'; " xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.TableViewController">
     <children>
       <AnchorPane layoutY="72.0" prefHeight="393.0" prefWidth="755.0" style="-fx-background-color: #545353;">
          <children>
@@ -56,7 +50,7 @@
                   </FontAwesomeIcon>
                </children>
             </HBox>
-            <FontAwesomeIcon fx:id="settingIcon" fill="#979393" glyphName="GEAR" layoutX="28.0" layoutY="371.0" size="4em">
+            <FontAwesomeIcon fx:id="settingIcon" fill="#979393" glyphName="GEAR" layoutX="28.0" layoutY="371.0" size="4em" text="">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></FontAwesomeIcon>
@@ -90,7 +84,7 @@
             </HBox>
             <Button fx:id="deleteAllButton" contentDisplay="TOP" layoutX="602.0" layoutY="335.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: orange;" text="Összes törlése" textFill="#f5f5f5">
                <font>
-                  <Font name="Sitka Text Bold Italic" size="14.0" />
+                  <Font name="Times New Roman bold" size="14.0" />
                </font>
                <effect>
                   <Lighting diffuseConstant="1.51" specularConstant="0.54" specularExponent="25.12" surfaceScale="1.4">
@@ -119,12 +113,12 @@
                <children>
                   <Label fx:id="usernameLabel" prefHeight="20.0" prefWidth="163.0" text="Label" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Times New Roman bold" size="14.0" />
                      </font>
                   </Label>
                   <Label fx:id="roleLabel" prefHeight="20.0" prefWidth="161.0" text="Label" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Times New Roman bold" size="14.0" />
                      </font>
                   </Label>
                </children>

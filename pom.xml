@@ -22,7 +22,11 @@
     </organization>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>11</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/de.jensd/fontawesomefx -->
         <dependency>
             <groupId>de.jensd</groupId>
@@ -43,17 +47,37 @@
             <artifactId>h2</artifactId>
             <version>1.4.199</version>
         </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>11</version>
-        </dependency>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>11</version>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>13.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.vladsch.flexmark</groupId>
+            <artifactId>flexmark-ext-abbreviation</artifactId>
+            <version>0.42.14</version>
+        </dependency>
+        <!-- Egyéb függőségek -->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>3.0.1</version> <!-- Használd a legfrissebb verziót -->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>fontbox</artifactId>
+            <version>3.0.1</version> <!-- Használd a legfrissebb verziót -->
+        </dependency>
+
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

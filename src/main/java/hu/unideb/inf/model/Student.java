@@ -46,6 +46,12 @@ public class Student {
     )
     private Set<User> parents = new HashSet<>();
 
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+    private List<Grade1> grades;
+
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+    private List<Grade2> grades1;
+
     public Student(String name, LocalDate birth, String address, String email) {
         this.name = name;
         this.birth = birth;

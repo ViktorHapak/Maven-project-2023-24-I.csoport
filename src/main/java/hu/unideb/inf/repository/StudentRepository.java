@@ -1,9 +1,6 @@
 package hu.unideb.inf.repository;
 
-import hu.unideb.inf.model.Final_grade;
-import hu.unideb.inf.model.Grade1;
-import hu.unideb.inf.model.Grade2;
-import hu.unideb.inf.model.Student;
+import hu.unideb.inf.model.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -27,8 +24,7 @@ public class StudentRepository {
     }
 
     public Student findById(Long id) {
-        Query query = entityManager.createNamedQuery("find student by id");
-        query.setParameter("id", id);
+        Query query = entityManager.createQuery("Select s from Student s where s.id ='" + id + "' ");
         return (Student) query.getSingleResult();
     }
 
@@ -75,8 +71,8 @@ public class StudentRepository {
     }
 
     //Frissítés, adott tanuló adatainak frissítése
-    public Student update(Student student) {
-        Student studentToUpdate  = find(student.getId());
+    public void update(Student student) {
+        Student studentToUpdate  = findById(student.getId());
         entityManager.getTransaction().begin();
         studentToUpdate.setName(student.getName());
         studentToUpdate.setBirth(student.getBirth());
@@ -85,7 +81,7 @@ public class StudentRepository {
 
         entityManager.getTransaction().commit();
         entityManager.clear();
-        return studentToUpdate;
+
     }
 
     //függvények a tanulók adatlistáihoz (a táblázat oszlopainak szerkesztéséhez)
@@ -117,6 +113,24 @@ public class StudentRepository {
         //Write the output-list in lines
         Query query = entityManager.createQuery("Select s.email from Student s");
         return query.getResultList();
+    }
+
+    public Student findByStudentemail(String email){
+        Query query = entityManager.createQuery("select s from Student s where s.email = '" + email + "'");
+        return (Student) query.getSingleResult();
+    }
+
+    public void deleteByEmail(String email) {
+            entityManager.getTransaction().begin();
+
+            Long studentId = findByStudentemail(email).getId();
+            Student studentToDelete = entityManager.find(Student.class, studentId);
+
+            if (studentToDelete != null) {
+                entityManager.remove(studentToDelete);
+            }
+
+            entityManager.getTransaction().commit();
     }
 
     public List<Student> findStudents() {
