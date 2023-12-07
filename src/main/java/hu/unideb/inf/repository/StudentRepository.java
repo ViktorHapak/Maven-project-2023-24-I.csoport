@@ -24,8 +24,7 @@ public class StudentRepository {
     }
 
     public Student findById(Long id) {
-        Query query = entityManager.createNamedQuery("find student by id");
-        query.setParameter("id", id);
+        Query query = entityManager.createQuery("Select s from Student s where s.id ='" + id + "' ");
         return (Student) query.getSingleResult();
     }
 
@@ -72,8 +71,8 @@ public class StudentRepository {
     }
 
     //Frissítés, adott tanuló adatainak frissítése
-    public Student update(Student student) {
-        Student studentToUpdate  = find(student.getId());
+    public void update(Student student) {
+        Student studentToUpdate  = findById(student.getId());
         entityManager.getTransaction().begin();
         studentToUpdate.setName(student.getName());
         studentToUpdate.setBirth(student.getBirth());
@@ -82,7 +81,7 @@ public class StudentRepository {
 
         entityManager.getTransaction().commit();
         entityManager.clear();
-        return studentToUpdate;
+
     }
 
     //függvények a tanulók adatlistáihoz (a táblázat oszlopainak szerkesztéséhez)

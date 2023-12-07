@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: rgb(30,39,130); -fx-font-family: 'Arial'; " xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.AddStudentController">
+    <children>
+        <AnchorPane layoutY="57.0" prefHeight="343.0" prefWidth="700.0" style="-fx-background-color: white;">
+            <children>
+
+                <Label layoutX="50.0" layoutY="80.0" text="Név:" textFill="#000000">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameField" layoutX="150.0" layoutY="75.0" prefHeight="25.0" prefWidth="200.0" promptText="Név" style="-fx-border-color: silver; -fx-border-radius: 5;" />
+
+                <Label layoutX="50.0" layoutY="130.0" text="Születési idő:" textFill="#000000">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="birthField" layoutX="150.0" layoutY="125.0" prefHeight="25.0" prefWidth="200.0" promptText="Születési idő" style="-fx-border-color: silver; -fx-border-radius: 5;" />
+
+                <Label layoutX="50.0" layoutY="180.0" text="Cím:" textFill="#000000">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="addressField" layoutX="150.0" layoutY="175.0" prefHeight="25.0" prefWidth="200.0" promptText="Cím" style="-fx-border-color: silver; -fx-border-radius: 5;" />
+
+                <Label layoutX="50.0" layoutY="230.0" text="Email:" textFill="#000000">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="emailField" layoutX="150.0" layoutY="225.0" prefHeight="25.0" prefWidth="200.0" promptText="Email" style="-fx-border-color: silver; -fx-border-radius: 5;" />
+                <Label fx:id="comment" alignment="CENTER" contentDisplay="CENTER" layoutX="187.0" layoutY="203.0" prefHeight="17.0" prefWidth="322.0" textAlignment="CENTER" textFill="RED" AnchorPane.leftAnchor="187.0" />
+                <Button fx:id="addButton" contentDisplay="TOP" layoutX="111.0" layoutY="280.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="99.0" style="-fx-background-color: green;" text="Hozzáadás" textAlignment="CENTER" textFill="#f5f5f5">
+                    <font>
+                        <Font name="Times New Roman bold" size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+
+                <Button fx:id="exitButton" contentDisplay="TOP" layoutX="250.0" layoutY="280.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="99.0" style="-fx-background-color: red;" text="Kilépés" textAlignment="CENTER" textFill="#f5f5f5">
+                    <font>
+                        <Font name="Times New Roman bold" size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Label fx:id="Title" layoutX="287.0" layoutY="14.0" prefHeight="45.0" prefWidth="295.0" text="Diák hozzáadása" textAlignment="RIGHT" textFill="WHITE" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="7.0">
+            <font>
+                <Font name="Impact" size="36.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

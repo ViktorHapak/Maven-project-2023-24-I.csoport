@@ -523,3 +523,6 @@ update Grade1 set module1='null' where id=30 [22018-199]
 2023-12-03 17:22:40 jdbc[7]: exception
 org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'null' (GRADE1: ""MODULE1"" INTEGER)"; SQL statement:
 update Grade1 set module1='null' where id=41 [22018-199]
+2023-12-06 21:02:46 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'null' (GRADE1: ""MODULE1"" INTEGER)"; SQL statement:
+update Grade1 set module1='null' where id=48 [22018-199]
