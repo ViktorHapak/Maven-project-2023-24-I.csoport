@@ -97,28 +97,40 @@ public class TableViewController {
         usernameLabel.setText(LoginController.active_username);
         roleLabel.setText(LoginController.active_role);
 
+        if (!LoginController.active_role.equals("admin"))
+        {outIcon.setVisible(false);}
+        else {
+            outIcon.setVisible(true);
+            outIcon.setOnMouseClicked(mouseEvent -> {
+                LoginController.active_username = null;
+                LoginController.active_role = null;
+                changeWindow = new ChangeWindow();
+                studentRepository.close();
+                changeWindow.changeOnIcon(outIcon, "/fxml/login.fxml");
 
-        outIcon.setOnMouseClicked(mouseEvent -> {
-            LoginController.active_username = null;
-            LoginController.active_role = null;
-            changeWindow = new ChangeWindow();
-            studentRepository.close();
-            changeWindow.changeOnIcon(outIcon,"/fxml/login.fxml");
-
-        });
-
-        gradesIcon.setOnMouseClicked(mouseEvent -> {
-            changeWindow = new ChangeWindow();
-            studentRepository.close();
-            changeWindow.changeOnIcon(outIcon,"/fxml/grades.fxml");
-        });
-
-        addStudentIcon.setOnMouseClicked(mouseEvent -> {
-            LoginController.active_role = "0";
-            changeWindow = new ChangeWindow();
-            studentRepository.close();
-            changeWindow.changeOnIcon(outIcon,"/fxml/AddStudent.fxml");
-        });
+            });
+        }
+        if (!LoginController.active_role.equals("admin"))
+        {gradesIcon.setVisible(false);}
+        else {
+            settingIcon.setVisible(true);
+            gradesIcon.setOnMouseClicked(mouseEvent -> {
+                changeWindow = new ChangeWindow();
+                studentRepository.close();
+                changeWindow.changeOnIcon(outIcon, "/fxml/grades.fxml");
+            });
+        }
+        if (!LoginController.active_role.equals("admin"))
+        {addStudentIcon.setVisible(false);}
+        else {
+            settingIcon.setVisible(true);
+            addStudentIcon.setOnMouseClicked(mouseEvent -> {
+                LoginController.active_role = "0";
+                changeWindow = new ChangeWindow();
+                studentRepository.close();
+                changeWindow.changeOnIcon(outIcon, "/fxml/AddStudent.fxml");
+            });
+        }
         if (!LoginController.active_role.equals("admin"))
         {settingIcon.setVisible(false);}
         else{

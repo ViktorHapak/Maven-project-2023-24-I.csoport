@@ -22,7 +22,6 @@
                         <Font name="Arial" size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="birthField" layoutX="150.0" layoutY="125.0" prefHeight="25.0" prefWidth="200.0" promptText="Születési idő" style="-fx-border-color: silver; -fx-border-radius: 5;" />
 
                 <Label layoutX="50.0" layoutY="180.0" text="Cím:" textFill="#000000">
                     <font>
@@ -55,6 +54,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
+            <DatePicker layoutX="150.0" layoutY="125.0" prefHeight="23.0" prefWidth="200.0" />
             </children>
         </AnchorPane>
         <Label fx:id="Title" layoutX="287.0" layoutY="14.0" prefHeight="45.0" prefWidth="295.0" text="Diák hozzáadása" textAlignment="RIGHT" textFill="WHITE" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="7.0">

@@ -1,0 +1,18 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\target",
+    "\\target\\classes",
+    "\\target\\classes\\hu",
+    "\\target\\classes\\hu\\unideb",
+    "\\target\\classes\\hu\\unideb\\inf",
+    "\\target\\maven-archiver",
+    "\\target\\maven-status",
+    "\\target\\maven-status\\maven-compiler-plugin",
+    "\\target\\maven-status\\maven-compiler-plugin\\compile",
+    "\\target\\maven-status\\maven-compiler-plugin\\compile\\default-cli",
+    "\\target\\maven-status\\maven-compiler-plugin\\compile\\default-compile"
+  ],
+  "SelectedNode": "\\src\\main\\java\\hu\\unideb\\inf\\model\\Final_grade.java",
+  "PreviewInSolutionExplorer": false
+}
