@@ -1,0 +1,33 @@
+Class_grading - alap felhasználók
+
+Jelszó minden felhasználónál: 12345
+
+1. Adminisztrátor
+   Név: Nagy Ádám
+   Felhasználónév: admin
+   Szerepkör: admin
+
+2. Tanár
+   Név: Kovács Eszter
+   Felhasználónév: teacher
+   Szerepkör: teacher
+
+3. Osztályfőnök
+   Név: Szabó Péter
+   Felhasználónév: classhead
+   Szerepkör: classhead
+
+4. Szülő
+   Név: Tóth Katalin
+   Felhasználónév: parent
+   Szerepkör: parent
+
+5. Látogató
+   Név: Varga Bence
+   Felhasználónév: visitor
+   Szerepkör: visitor
+
+
+Tantárgyak:
+- Matematika
+- Informatika
